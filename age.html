@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+<head>
+<script>
+function calculate() {
+var bdt = parseInt(document.getElementById("bdt").value);
+var bmnt = parseInt(document.getElementById("bmnt").value);
+var byr = parseInt(document.getElementById("byer").value);
+var today = new Date();
+var tdt = today.getDate();
+var tmnt = today.getMonth();
+var tyr = today.getFullYear();
+var age;
+if ((tyr > byr) || (tyr == byr & tdt > bdt)) {
+age = byr;
+}
+else {
+age = byr + 1;
+}
+alert("age is :"+(tyr-age));
+}
+</script>
+</head>
+<body>
+bdate: <input type="text" id="bdt" /><br/>
+bmonth: <input type="text" id="bmnt" /><br />
+byear: <input type="text" id="byer" /><br />
+<input type="button" value="calculate" onclick="calculate()" />
+</body>
+</html>
