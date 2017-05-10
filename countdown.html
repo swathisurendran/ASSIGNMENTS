@@ -1,0 +1,27 @@
+<!DOCTYPE>
+<html>
+<head>
+<script>
+var n=parseInt(prompt("enter the value of n",""));
+function Timer()
+{
+var m = document.getElementById("timer").innerHTML=n;
+n--;
+if(n==0)
+{
+alert("expired");
+clearTimeout(i);
+}
+}
+var i=setInterval('Timer()',1000);
+function clear()
+{
+clearInterval(i);
+}
+setTimeout('clear()',1000000);
+</script>
+</head>
+<body>
+<p id ="timer"></p>
+</body>
+</html>
